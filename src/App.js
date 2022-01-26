@@ -10,6 +10,8 @@ import FavoriteMovieList from './components/FavoriteMovieList';
 
 import axios from 'axios';
 
+import AddMovie from './components/AddMovie'
+
 import EditMovieForm from './components/EditMovieForm'
 
 const App = (props) => {
@@ -48,6 +50,10 @@ const App = (props) => {
           <Switch>
             <Route path="/movies/edit/:id">
               <EditMovieForm setMovie={setMovies}/>
+            </Route>
+
+            <Route path='/movies/add'>
+              <AddMovie setMovies={setMovies} />
             </Route>
 
             <Route path="/movies/:id">
